@@ -1,0 +1,14 @@
+body{
+
+    /*
+    background-image: url("../img/bac2.jpg");
+    */
+
+background-color: #1c1b1b;
+}
+#mainText{
+    text-align: center;
+    color: azure;
+    font-family: "Lucida Sans";
+}
+
