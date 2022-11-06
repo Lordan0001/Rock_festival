@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock-fest</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/artistList.css}"/>
+
+</head>
+<body>
+
+<div class="topnav">
+    <a class="active" href="index">Home</a>
+    <a href="artistList">Group List</a>
+    <a href="#contact">News</a>
+    <a href="#about">About</a>
+</div>
+
+<div id="mainList">
+
+
+    <div>
+        <h1 th:utext="${grList}"></h1>
+    </div>
+<table  border="1">
+    <tr>
+        <th><h1>Group</h1></th>
+        <th><h1>Album</h1></th>
+    </tr>
+    <tr th:each ="m : ${music}">
+        <td th:utext="${m.artistName}">...</td>
+        <td th:utext="${m.album}">...</td>
+    </tr>
+
+
+</table>
+
+</div>
+
+</body>
+</html>

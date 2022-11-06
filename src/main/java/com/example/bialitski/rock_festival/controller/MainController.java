@@ -18,13 +18,29 @@ static {
 }
 
     @Value("${welcome.message}")
-    private String message;
+    private String greetings;
 
+    @Value("${groups.msg}")
+    private String grList;
+
+
+//main page
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
     public ModelAndView index(Model model) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");
-        model.addAttribute("message", message);
+        model.addAttribute("message", greetings);
+        return modelAndView;
+    }
+
+    //all artists
+    @RequestMapping(value = {"/artistList"}, method = RequestMethod.GET)
+    public ModelAndView artistList(Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("artistList");
+        model.addAttribute("music", artists);
+
+        model.addAttribute("grList", grList);
         return modelAndView;
     }
 

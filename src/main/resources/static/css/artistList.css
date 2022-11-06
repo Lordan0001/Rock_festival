@@ -1,18 +1,10 @@
-body{
 
-    /*
-    background-image: url("../img/bac2.jpg");
-    */
-
-background-color: #1c1b1b;
+* {
+    background-color: #2f2f2f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
 }
-#mainText{
-    text-align: center;
-    color: azure;
-    font-family:"Lucida Bright" ;
 
-}
-/*top bar*/
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -36,4 +28,3 @@ background-color: #1c1b1b;
     background-color: #333;
     color: white;
 }
-/*top bar*/

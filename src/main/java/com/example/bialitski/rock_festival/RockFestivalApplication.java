@@ -8,8 +8,6 @@ public class RockFestivalApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(RockFestivalApplication.class, args);
-        System.out.println("test");
-        System.out.println("Some code");
     }
 
 }
