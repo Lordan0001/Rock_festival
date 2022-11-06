@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Welcome</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}"/>
 </head>
 <body>
 <div class="topnav">
-    <a class="active" href="index">Home</a>
+    <a href="index">Home</a>
     <a href="artistList">Group List</a>
     <a href="#contact">News</a>
     <a href="#about">About</a>
 </div>
 
-<div id="MainDiv">
-    <div id="mainText">
-        <h1 th:utext="${message}">..!..</h1>
 
+<div id="MainDiv">
+    <div id="HeadText">
+        <p th:utext="${message}">..!..</p>
     </div>
-    <div id="ii">
-        <a href="artistList">Show group list</a>
-    </div>
+
+
+
+
 </div> <!--end main div-->
 
 </body>

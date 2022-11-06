@@ -1,21 +1,29 @@
-body{
-
-    /*
-    background-image: url("../img/bac2.jpg");
-    */
-
-background-color: #1c1b1b;
+* {
+    background-color: #2f2f2f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
 }
-#mainText{
+/*#mainText{
     text-align: center;
     color: azure;
     font-family:"Lucida Bright" ;
 
+}*/
+#HeadText{
+    font-size: 25px;
+    font-family: "Lucida Sans";
+    margin: 20px 20px 50px 20px;
+    text-align: center;
 }
+
+
+
 /*top bar*/
 .topnav {
     overflow: hidden;
     background-color: #333;
+    border: 1px solid whitesmoke;
+  /*  border-bottom-color: #dddddd;*/
 }
 
 .topnav a {
@@ -32,8 +40,5 @@ background-color: #1c1b1b;
     color: black;
 }
 
-.topnav a.active {
-    background-color: #333;
-    color: white;
-}
+
 /*top bar*/
