@@ -1,9 +1,13 @@
 package com.example.bialitski.rock_festival.controller;
 
+import com.example.bialitski.rock_festival.interfaces.CustomerRepository;
 import com.example.bialitski.rock_festival.model.Artist;
+import com.example.bialitski.rock_festival.model.Customer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -17,6 +21,8 @@ static {
     artists.add(new Artist("Rob Zombie","The Lunar Injection Kool Aid Eclipse Conspiracy"));
 }
 
+    @Autowired
+    private CustomerRepository customerRepo;
     @Value("${welcome.message}")
     private String greetings;
 
@@ -45,6 +51,13 @@ static {
     }
 
 
+//Temp
+@GetMapping("/customers")
+public String listAll(Model model) {
+    List<Customer> listCustomers = customerRepo.findAll();
+    model.addAttribute("listCustomers", listCustomers);
 
+    return "customers";
+}
 
 }
