@@ -50,7 +50,7 @@ static {
         return modelAndView;
     }
 
-
+//ща буит не темп
 //Temp
 @GetMapping("/customers")
 public String listAll(Model model) {
