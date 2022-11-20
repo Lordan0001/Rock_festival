@@ -45,12 +45,12 @@ public class MainController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("GroupList");
         List<Groups> listGroups = groupsRepo.findAll();
+
         model.addAttribute("listGroups", listGroups);
 
         model.addAttribute("grList", grList);//message
         return modelAndView;
     }
-
 
 
     @GetMapping("/AlbumsList")
@@ -60,8 +60,6 @@ public class MainController {
 
         return "AlbumsList";
     }
-
-
 
 
 }
