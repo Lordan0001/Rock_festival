@@ -6,9 +6,6 @@ import com.example.bialitski.rock_festival.model.Albums;
 import com.example.bialitski.rock_festival.model.Groups;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.jpa.repository.Modifying;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -63,9 +60,9 @@ public class MainController {
         return "AlbumsList";
     }
 
-    //test
+    //Manage Group List
     @RequestMapping("/ManageGroupList")
-    public ModelAndView Manage(Model model) {
+    public ModelAndView ManageGroup(Model model) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("ManageGroupList");
         List<Groups> listGroups = groupsRepo.findAll();
@@ -75,7 +72,7 @@ public class MainController {
     }
 
     @RequestMapping("/addGroup")
-    public ModelAndView saveData(Groups groups) {
+    public ModelAndView saveGroup(Groups groups) {
         groupsRepo.save(groups);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("ManageGroupList");
@@ -86,7 +83,7 @@ public class MainController {
     }
 
     @RequestMapping("/deleteGroup")
-    public ModelAndView deleteData(@RequestParam("Id") long Id) {
+    public ModelAndView deleteGroup(@RequestParam("Id") long Id) {
         groupsRepo.deleteById(Id);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("ManageGroupList");
@@ -94,6 +91,38 @@ public class MainController {
 
         modelAndView.addObject("listGroups", listGroups);
              return modelAndView;
+    }
+
+    //Manage Album List
+    @RequestMapping("/ManageAlbumList")
+    public ModelAndView ManageAlbum(Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("ManageAlbumList");
+        List<Albums> listAlbums = albumsRepo.findAll();
+
+        model.addAttribute("listAlbums", listAlbums);
+        return modelAndView;
+    }
+    @RequestMapping("/addAlbum")
+    public ModelAndView saveAlbum(Albums albums) {
+       albumsRepo.save(albums);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("ManageAlbumList");
+        List<Albums> listAlbums = albumsRepo.findAll();
+
+        modelAndView.addObject("listAlbums", listAlbums);
+        return modelAndView;
+    }
+
+    @RequestMapping("/deleteAlbum")
+    public ModelAndView deleteAlbum(@RequestParam("Id") long Id) {
+        albumsRepo.deleteById(Id);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("ManageAlbumList");
+        List<Albums> listAlbums = albumsRepo.findAll();
+
+        modelAndView.addObject("listAlbums", listAlbums);
+        return modelAndView;
     }
 
 

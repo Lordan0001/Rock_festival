@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock-fest</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/artistList.css}"/>
+</head>
+<body>
+<div>
+  <div>
+    <h2>Add album</h2>
+    <form action="/addAlbum"  method="post">
+      <label>Input band name </label>
+      <input type="text" name="name"></br>
+
+      <label>Input album name </label>
+      <input type="text" name="albumName"></br>
+
+      <input type="submit" value="Add">
+    </form></div>
+
+
+  <div>
+    <h2>Delete album</h2>
+    <form action="/deleteAlbum" method="post">
+      <label>Input id to delete </label>
+      <input type="text" name="Id"></br>
+
+      <input type="submit" value="Delete">
+    </form></div>
+
+  <div>
+    <button ><a href="index">Main page</a> </button>
+  </div>
+
+  <table  border="1">
+    <tr>
+      <th><h1>Id</h1></th>
+      <th><h1>Band name</h1></th>
+      <th><h1>Album name</h1></th>
+
+    </tr>
+    <tr th:each ="l : ${listAlbums}">
+      <td th:utext="${l.id}">...</td>
+      <td th:utext="${l.name}">...</td>
+      <td th:utext="${l.albumName}">...</td>
+
+    </tr>
+
+
+  </table></div>
+
+</div>
+
+
+</body>
+</html>
