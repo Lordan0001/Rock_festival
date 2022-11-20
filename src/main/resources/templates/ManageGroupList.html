@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock-fest</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/artistList.css}"/>
+</head>
+<body>
+<div>
+    <div>
+        <h2>Add Group</h2>
+<form action="/addGroup"  method="post">
+  <label>Input groupName </label>
+  <input type="text" name="groupName"></br>
+
+  <label>Input groupDescription </label>
+  <input type="text" name="groupDescription"></br>
+
+  <label>Input GroupStyle </label>
+  <input type="text" name="GroupStyle"></br>
+
+  <input type="submit" value="Save">
+</form></div>
+
+
+    <div>
+        <h2>Delete Group</h2>
+        <form action="/deleteGroup" method="post">
+            <label>Input Id to delete </label>
+            <input type="text" name="Id"></br>
+
+            <input type="submit" value="Delete">
+        </form></div>
+
+    <div>
+        <button ><a href="index">Main page</a> </button>
+    </div>
+
+    <table  border="1">
+        <tr>
+            <th><h1>Id</h1></th>
+            <th><h1>Group</h1></th>
+            <th><h1>Description</h1></th>
+            <th><h1>Style</h1></th>
+        </tr>
+        <tr th:each ="l : ${listGroups}">
+            <td th:utext="${l.Id}">...</td>
+            <td th:utext="${l.groupName}">...</td>
+            <td th:utext="${l.groupDescription}">...</td>
+            <td th:utext="${l.groupStyle}">...</td>
+        </tr>
+
+
+    </table></div>
+
+</div>
+
+
+</body>
+</html>
