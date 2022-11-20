@@ -4,6 +4,16 @@ import javax.persistence.*;
 @Entity
 @Table(name = "customers")
 public class Customer {
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private String email;
+    private int age;
+
     public int getAge() {
         return age;
     }
@@ -35,14 +45,6 @@ public class Customer {
     public void setId(Long id) {
         this.id = id;
     }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String name;
-    private String email;
-    private int age;
 
     // getters and setters...
 }

@@ -1,8 +1,12 @@
 package com.example.bialitski.rock_festival.controller;
 
+import com.example.bialitski.rock_festival.interfaces.AlbumsRepository;
 import com.example.bialitski.rock_festival.interfaces.CustomerRepository;
+import com.example.bialitski.rock_festival.interfaces.GroupsRepository;
+import com.example.bialitski.rock_festival.model.Albums;
 import com.example.bialitski.rock_festival.model.Artist;
 import com.example.bialitski.rock_festival.model.Customer;
+import com.example.bialitski.rock_festival.model.Groups;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -23,6 +27,13 @@ static {
 
     @Autowired
     private CustomerRepository customerRepo;
+
+    @Autowired
+    private AlbumsRepository albumsRepo;
+
+    @Autowired
+    private GroupsRepository groupsRepo;
+
     @Value("${welcome.message}")
     private String greetings;
 
@@ -59,5 +70,23 @@ public String listAll(Model model) {
 
     return "customers";
 }
+
+    @GetMapping("/albums")
+    public String listAllAlbums(Model model) {
+        List<Albums> listAlbums = albumsRepo.findAll();
+        model.addAttribute("listAlbums", listAlbums);
+
+        return "FrontAlbums";
+    }
+
+    @GetMapping("/groups")
+    public String listAllGroups(Model model) {
+        List<Groups> listGroups = groupsRepo.findAll();
+        model.addAttribute("listGroups", listGroups);
+
+        return "FrontGroups";
+    }
+
+
 
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Person</h1>
+
+
+<div class="container">
+  <table class ="container" border="1">
+    <tr>
+      <th><h1>Group</h1></th>
+      <th><h1>Album</h1></th>
+
+    </tr>
+    <tr th:each ="l : ${listAlbums}">
+      <td th:utext="${l.name}">...</td>
+      <td th:utext="${l.albumName}">...</td>
+    </tr>
+
+  </table>
+</div>
+</body>
+</html>
