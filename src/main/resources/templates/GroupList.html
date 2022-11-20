@@ -10,7 +10,7 @@
 
 <div class="topnav">
     <a href="index">Home</a>
-    <a href="artistList">Group List</a>
+    <a href="GroupList">Group List</a>
     <a href="#contact">News</a>
     <a href="#about">About</a>
 
@@ -22,18 +22,25 @@
     <div>
         <p id="HeadText" th:utext="${grList}"></p>
     </div>
+    <div>
 <table  border="1">
     <tr>
-        <th><p>Group</p></th>
-        <th><p>Album</p></th>
+        <th><h1>Group</h1></th>
+        <th><h1>Description</h1></th>
+        <th><h1>Style</h1></th>
     </tr>
-    <tr th:each ="m : ${music}">
-        <td th:utext="${m.artistName}">...</td>
-        <td th:utext="${m.album}">...</td>
+    <tr th:each ="l : ${listGroups}">
+        <td th:utext="${l.groupName}">...</td>
+        <td th:utext="${l.groupDescription}">...</td>
+        <td th:utext="${l.groupStyle}">...</td>
     </tr>
 
 
-</table>
+</table></div>
+
+    <div>
+        <button ><a href="AlbumsList">See albums</a> </button>
+    </div>
 
 </div>
 
