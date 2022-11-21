@@ -51,7 +51,7 @@ public class MainController {
         return modelAndView;
     }
 
-
+    //All Albums
     @GetMapping("/AlbumsList")
     public String listAllAlbums(Model model) {
         List<Albums> listAlbums = albumsRepo.findAll();
