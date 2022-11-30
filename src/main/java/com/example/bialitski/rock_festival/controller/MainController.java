@@ -61,69 +61,69 @@ public class MainController {
     }
 
     //Manage Group List
-    @RequestMapping("/ManageGroupList")
-    public ModelAndView ManageGroup(Model model) {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("ManageGroupList");
-        List<Groups> listGroups = groupsRepo.findAll();
-
-        model.addAttribute("listGroups", listGroups);
-        return modelAndView;
-    }
-
-    @RequestMapping("/addGroup")
-    public ModelAndView saveGroup(Groups groups) {
-        groupsRepo.save(groups);
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("ManageGroupList");
-        List<Groups> listGroups = groupsRepo.findAll();
-
-        modelAndView.addObject("listGroups", listGroups);
-        return modelAndView;
-    }
-
-    @RequestMapping("/deleteGroup")
-    public ModelAndView deleteGroup(@RequestParam("Id") long Id) {
-        groupsRepo.deleteById(Id);
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("ManageGroupList");
-        List<Groups> listGroups = groupsRepo.findAll();
-
-        modelAndView.addObject("listGroups", listGroups);
-             return modelAndView;
-    }
-
-    //Manage Album List
-    @RequestMapping("/ManageAlbumList")
-    public ModelAndView ManageAlbum(Model model) {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("ManageAlbumList");
-        List<Albums> listAlbums = albumsRepo.findAll();
-
-        model.addAttribute("listAlbums", listAlbums);
-        return modelAndView;
-    }
-    @RequestMapping("/addAlbum")
-    public ModelAndView saveAlbum(Albums albums) {
-       albumsRepo.save(albums);
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("ManageAlbumList");
-        List<Albums> listAlbums = albumsRepo.findAll();
-
-        modelAndView.addObject("listAlbums", listAlbums);
-        return modelAndView;
-    }
-
-    @RequestMapping("/deleteAlbum")
-    public ModelAndView deleteAlbum(@RequestParam("Id") long Id) {
-        albumsRepo.deleteById(Id);
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("ManageAlbumList");
-        List<Albums> listAlbums = albumsRepo.findAll();
-
-        modelAndView.addObject("listAlbums", listAlbums);
-        return modelAndView;
-    }
+//    @RequestMapping("/ManageGroupList")
+//    public ModelAndView ManageGroup(Model model) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("ManageGroupList");
+//        List<Groups> listGroups = groupsRepo.findAll();
+//
+//        model.addAttribute("listGroups", listGroups);
+//        return modelAndView;
+//    }
+//
+//    @RequestMapping("/addGroup")
+//    public ModelAndView saveGroup(Groups groups) {
+//        groupsRepo.save(groups);
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("ManageGroupList");
+//        List<Groups> listGroups = groupsRepo.findAll();
+//
+//        modelAndView.addObject("listGroups", listGroups);
+//        return modelAndView;
+//    }
+//
+//    @RequestMapping("/deleteGroup")
+//    public ModelAndView deleteGroup(@RequestParam("Id") long Id) {
+//        groupsRepo.deleteById(Id);
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("ManageGroupList");
+//        List<Groups> listGroups = groupsRepo.findAll();
+//
+//        modelAndView.addObject("listGroups", listGroups);
+//             return modelAndView;
+//    }
+//
+//    //Manage Album List
+//    @RequestMapping("/ManageAlbumList")
+//    public ModelAndView ManageAlbum(Model model) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("ManageAlbumList");
+//        List<Albums> listAlbums = albumsRepo.findAll();
+//
+//        model.addAttribute("listAlbums", listAlbums);
+//        return modelAndView;
+//    }
+//    @RequestMapping("/addAlbum")
+//    public ModelAndView saveAlbum(Albums albums) {
+//       albumsRepo.save(albums);
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("ManageAlbumList");
+//        List<Albums> listAlbums = albumsRepo.findAll();
+//
+//        modelAndView.addObject("listAlbums", listAlbums);
+//        return modelAndView;
+//    }
+//
+//    @RequestMapping("/deleteAlbum")
+//    public ModelAndView deleteAlbum(@RequestParam("Id") long Id) {
+//        albumsRepo.deleteById(Id);
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("ManageAlbumList");
+//        List<Albums> listAlbums = albumsRepo.findAll();
+//
+//        modelAndView.addObject("listAlbums", listAlbums);
+//        return modelAndView;
+//    }
 
 
 

@@ -7,6 +7,10 @@
 </head>
 <body>
 <div>
+
+  <div>
+    <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+  </div>
   <div>
     <h2>Add album</h2>
     <form action="/addAlbum"  method="post">

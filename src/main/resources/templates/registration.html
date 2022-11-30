@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Spring Security Example </title>
+    <style>
+        * {
+            background-color: #2f2f2f;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: whitesmoke;
+        }
+        /*#mainText{
+            text-align: center;
+            color: azure;
+            font-family:"Lucida Bright" ;
+
+        }*/
+        #HeadText{
+            font-size: 25px;
+            font-family: "Lucida Sans";
+            margin: 20px 20px 50px 20px;
+            text-align: center;
+        }
+
+
+
+        /*top bar*/
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            border: 1px solid whitesmoke;
+            /*  border-bottom-color: #dddddd;*/
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+
+        /*top bar*/
+    </style>
+</head>
+<body>
+<div>
+    <div>
+        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+    </div>
+
+
+
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+Add new User
+    <div>
+<form th:action="@{/registration}" method="post">
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><input type="submit" value="Sign In"/></div>
+</form>
+    </div>
+</div>
+</body>
+
+</html>
