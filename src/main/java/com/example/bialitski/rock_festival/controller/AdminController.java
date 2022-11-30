@@ -1,8 +1,10 @@
 package com.example.bialitski.rock_festival.controller;
 
 import com.example.bialitski.rock_festival.interfaces.AlbumsRepository;
+import com.example.bialitski.rock_festival.interfaces.CitiesRepository;
 import com.example.bialitski.rock_festival.interfaces.GroupsRepository;
 import com.example.bialitski.rock_festival.model.Albums;
+import com.example.bialitski.rock_festival.model.Cities;
 import com.example.bialitski.rock_festival.model.Groups;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -18,6 +20,7 @@ import java.util.List;
 @PreAuthorize("hasAuthority('ADMIN')")
 
 public class AdminController {
+
 
     @Autowired
     private AlbumsRepository albumsRepo;
@@ -90,6 +93,11 @@ public class AdminController {
         modelAndView.addObject("listAlbums", listAlbums);
         return modelAndView;
     }
+
+
+
+
+
 
 }
 

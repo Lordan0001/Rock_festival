@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock-fest</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/artistList.css}"/>
+</head>
+<body>
+<div>
+    <div>
+        <h2>Add Group</h2>
+<form action="/addTicket"  method="post">
+
+  <label>Input City </label>
+  <input type="text" name="city"></br>
+
+  <label>Input ticket point </label>
+  <input type="text" name="ticketPoint"></br>
+
+  <label>Input User </label>
+  <input type="text" name="userOfTicket"></br>
+
+  <input type="submit" value="Save">
+</form></div>
+    <div>
+        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+    </div>
+
+
+    <div>
+        <h2>Delete Group</h2>
+        <form action="/deleteTicket" method="post">
+            <label>Input Id to delete </label>
+            <input type="text" name="Id"></br>
+
+            <input type="submit" value="Delete">
+        </form></div>
+
+    <div>
+        <button ><a href="index">Main page</a> </button>
+    </div>
+
+    <table  border="1">
+        <tr>
+            <th><h1>Id</h1></th>
+            <th><h1>City</h1></th>
+            <th><h1>Ticket point</h1></th>
+            <th><h1>user</h1></th>
+        </tr>
+        <tr th:each ="l : ${listTickets}">
+            <td th:utext="${l.Id}">...</td>
+            <td th:utext="${l.city}">...</td>
+            <td th:utext="${l.ticketPoint}">...</td>
+            <td th:utext="${l.userOfTicket}">...</td>
+        </tr>
+
+
+    </table></div>
+
+</div>
+
+
+</body>
+</html>
