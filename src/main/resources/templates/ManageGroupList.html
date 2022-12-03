@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock-fest</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/artistList.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/groupList.css}"/>
 </head>
 <body>
 <div>
     <div>
         <h2>Add Group</h2>
-<form action="/addGroup"  method="post">
-  <label>Input groupName </label>
-  <input type="text" name="groupName"></br>
+        <form action="/addGroup" method="post">
+            <label>Input groupName </label>
+            <input type="text" name="groupName"></br>
 
-  <label>Input groupDescription </label>
-  <input type="text" name="groupDescription"></br>
+            <label>Input groupDescription </label>
+            <input type="text" name="groupDescription"></br>
 
-  <label>Input GroupStyle </label>
-  <input type="text" name="GroupStyle"></br>
+            <label>Input GroupStyle </label>
+            <input type="text" name="GroupStyle"></br>
 
-  <input type="submit" value="Save">
-</form></div>
-    <div>
-        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+            <input type="submit" value="Save">
+        </form>
     </div>
-
 
     <div>
         <h2>Delete Group</h2>
@@ -33,20 +30,21 @@
             <input type="text" name="Id"></br>
 
             <input type="submit" value="Delete">
-        </form></div>
-
-    <div>
-        <button ><a href="index">Main page</a> </button>
+        </form>
     </div>
 
-    <table  border="1">
+    <div>
+        <button><a href="index">Main page</a></button>
+    </div>
+
+    <table border="1">
         <tr>
-            <th><h1>Id</h1></th>
-            <th><h1>Group</h1></th>
-            <th><h1>Description</h1></th>
-            <th><h1>Style</h1></th>
+            <th><h2>Id</h2></th>
+            <th><h2>Group</h2></th>
+            <th><h2>Description</h2></th>
+            <th><h2>Style</h2></th>
         </tr>
-        <tr th:each ="l : ${listGroups}">
+        <tr th:each="l : ${listGroups}">
             <td th:utext="${l.Id}">...</td>
             <td th:utext="${l.groupName}">...</td>
             <td th:utext="${l.groupDescription}">...</td>
@@ -54,7 +52,8 @@
         </tr>
 
 
-    </table></div>
+    </table>
+</div>
 
 </div>
 

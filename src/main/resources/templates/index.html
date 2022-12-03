@@ -6,24 +6,27 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}"/>
 </head>
 <body>
-<div class="person">
-    <h1 th:inline="text">Your name is [[${#httpServletRequest.remoteUser}]]!</h1>
-</div>
+
 <div class="topnav">
-    <a href="index">Home</a>
-    <a href="GroupList">Group List</a>
+    <a href="/index">Home</a>
+    <a href="/GroupList">Group List</a>
+    <a href="/AlbumsList">Albums</a>
     <a href="#contact">News</a>
     <a href="#about">About</a>
     <form class="out" th:action="@{/logout}" method="post">
-        <input type="submit" value="Sign Out" />
+        <input type="submit" value="Sign Out"/>
     </form>
 </div>
-<div id="MainDiv">
-    <div id="HeadText">
-        <p th:utext="${message}">..!..</p>
+
+
+    <div id="MainDiv">
+        <div id="HeadText">
+            <p th:utext="${message}">..!..</p>
+        </div>
+
+    <div class="person">
+        <h1 th:inline="text">Your name is [[${#httpServletRequest.remoteUser}]]!</h1>
     </div>
-
-
 
 
 </div> <!--end main div-->

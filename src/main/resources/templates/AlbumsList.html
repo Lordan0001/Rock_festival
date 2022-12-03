@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rock-fest</title>
-  <link rel="stylesheet" type="text/css" th:href="@{/css/artistList.css}"/>
+    <meta charset="UTF-8">
+    <title>Rock-fest</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/groupList.css}"/>
 
 </head>
 <body>
 
 <div class="topnav">
-  <a href="index">Home</a>
-  <a href="GroupList">Group List</a>
-  <a href="#contact">News</a>
-  <a href="#about">About</a>
+    <a href="/index">Home</a>
+    <a href="/GroupList">Group List</a>
+    <a href="/AlbumsList">Albums</a>
+    <a href="#contact">News</a>
+    <a href="#about">About</a>
 
 </div>
 <div class="container">
-  <div>
-    <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-  </div>
+    <div>
+        <p class="HeadText" th:utext="${albumListMessage}"></p>
+    </div>
+    <div>
+        <table class="container" border="1">
+            <tr>
+                <th><h2>Group</h2></th>
+                <th><h2>Album</h2></th>
 
-  <div>
-  <table class ="container" border="1">
-    <tr>
-      <th><h1>Group</h1></th>
-      <th><h1>Album</h1></th>
+            </tr>
+            <tr th:each="l : ${listAlbums}">
+                <td th:utext="${l.name}">...</td>
+                <td th:utext="${l.albumName}">...</td>
+            </tr>
 
-    </tr>
-    <tr th:each ="l : ${listAlbums}">
-      <td th:utext="${l.name}">...</td>
-      <td th:utext="${l.albumName}">...</td>
-    </tr>
+        </table>
+    </div>
 
-  </table></div>
-
- <div> <button ><a href="ManageAlbumList">Manage albums</a> </button></div>
+    <div>
+        <button><a href="ManageAlbumList">Manage albums</a></button>
+    </div>
 </div>
 </body>
 </html>

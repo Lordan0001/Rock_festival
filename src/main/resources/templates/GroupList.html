@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock-fest</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/artistList.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/groupList.css}"/>
 
 </head>
 <body>
-<div>
-    <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-</div>
 
 <div class="topnav">
-    <a href="index">Home</a>
-    <a href="GroupList">Group List</a>
+    <a href="/index">Home</a>
+    <a href="/GroupList">Group List</a>
+    <a href="/AlbumsList">Albums</a>
     <a href="#contact">News</a>
     <a href="#about">About</a>
 
@@ -21,35 +19,34 @@
 
 <div id="mainList">
 
-
     <div>
-        <p id="HeadText" th:utext="${grList}"></p>
+        <p class="HeadText" th:utext="${groupListMessage}"></p>
     </div>
-    <div>
-<table  border="1">
-    <tr>
-        <th><h1>Group</h1></th>
-        <th><h1>Description</h1></th>
-        <th><h1>Style</h1></th>
-    </tr>
-    <tr th:each ="l : ${listGroups}">
-        <td th:utext="${l.groupName}">...</td>
-        <td th:utext="${l.groupDescription}">...</td>
-        <td th:utext="${l.groupStyle}">...</td>
-    </tr>
 
-
-</table></div>
-
-    <div>
-        <button ><a href="AlbumsList">See albums</a> </button>
-    </div>
-    <div>
-        <button ><a href="ManageGroupList">Manage group list</a> </button>
+    <div class="buttonDiv">
+        <button class="buttonStyle"  ><a class="refStyle" href="ManageGroupList">Change</a></button>
     </div>
 
     <div>
-        <button ><a href="ManageTicketList">ORDER TICKET NOW!</a> </button>
+        <table border="1" class="styled-table">
+            <tr>
+                <th><h2>Group</h2></th>
+                <th><h2>Description</h2></th>
+                <th><h2>Style</h2></th>
+            </tr>
+            <tr class="active-row" th:each="l : ${listGroups}">
+                <td th:utext="${l.groupName}">...</td>
+                <td th:utext="${l.groupDescription}">...</td>
+                <td th:utext="${l.groupStyle}">...</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+    <div class="orderButtonDiv" >
+        <button class="orderButtonStyle" >ORDER TICKET NOW!<a class="refStyle" href="ManageTicketList"></a></button>
     </div>
 
 </div>
