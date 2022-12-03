@@ -8,16 +8,16 @@
 <body>
 <div>
     <div>
-        <h2>Add Group</h2>
+        <h2>Enter your details to order</h2>
 <form action="/addTicket"  method="post">
 
-  <label>Input City </label>
+  <label>Your City </label>
   <input type="text" name="city"></br>
 
-  <label>Input ticket point </label>
+  <label>Your ticket point </label>
   <input type="text" name="ticketPoint"></br>
 
-  <label>Input User </label>
+  <label>Your name on site </label>
   <input type="text" name="userOfTicket"></br>
 
   <input type="submit" value="Save">
@@ -26,9 +26,8 @@
         <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
     </div>
 
-
     <div>
-        <h2>Delete Group</h2>
+        <h2>Delete your ticket</h2>
         <form action="/deleteTicket" method="post">
             <label>Input Id to delete </label>
             <input type="text" name="Id"></br>
@@ -38,6 +37,9 @@
 
     <div>
         <button ><a href="index">Main page</a> </button>
+    </div>
+    <div>
+       <h2>Ordered tickets</h2>
     </div>
 
     <table  border="1">
@@ -53,12 +55,9 @@
             <td th:utext="${l.ticketPoint}">...</td>
             <td th:utext="${l.userOfTicket}">...</td>
         </tr>
-
-
     </table></div>
 
+
 </div>
-
-
 </body>
 </html>
