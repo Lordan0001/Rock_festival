@@ -14,7 +14,9 @@
     <a href="/AlbumsList">Albums</a>
     <a href="#contact">News</a>
     <a href="#about">About</a>
-
+    <form class="out" th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
 </div>
 
 <div id="mainList">
@@ -46,7 +48,7 @@
 
 
     <div class="orderButtonDiv" >
-        <button class="orderButtonStyle" >ORDER TICKET NOW!<a class="refStyle" href="ManageTicketList"></a></button>
+        <button class="orderButtonStyle" ><a class="refStyle" href="ManageTicketList">ORDER TICKET NOW!</a></button>
     </div>
 
 </div>

@@ -4,7 +4,7 @@ body {
     /*font-family: "Lucida Sans", serif;*/
     color: whitesmoke;
 }
-
+/*start top bar*/
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -19,12 +19,18 @@ body {
     text-decoration: none;
     font-size: 17px;
 }
+.out{
+    position: absolute;
+    right: 2px;
+    margin: 12px 20px 0 10px;
+}
 
 
 .topnav a:hover {
     background-color: #ddd;
     color: black;
 }
+/*end of top bar*/
 
 .HeadText{
     font-size: 25px;

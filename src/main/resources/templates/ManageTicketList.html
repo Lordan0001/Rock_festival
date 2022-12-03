@@ -3,62 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock-fest</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/groupList.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/ManageList.css}"/>
 </head>
 <body>
-<div>
-    <div>
-        <h2>Enter your details to order</h2>
-        <form action="/addTicket" method="post">
 
-            <label>Your City </label>
-            <input type="text" name="city"></br>
-
-            <label>Your ticket point </label>
-            <input type="text" name="ticketPoint"></br>
-
-            <label>Your name on site </label>
-            <input type="text" name="userOfTicket"></br>
-
-            <input type="submit" value="Save">
+<div class="main">
+    <div class="topnav">
+        <a href="/index">Home</a>
+        <a href="/GroupList">Group List</a>
+        <a href="/AlbumsList">Albums</a>
+        <a href="#contact">News</a>
+        <a href="#about">About</a>
+        <form class="out" th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
         </form>
     </div>
 
+    <div class="flex-parent-element">
 
-    <div>
-        <h2>Delete your ticket</h2>
-        <form action="/deleteTicket" method="post">
-            <label>Input Id to delete </label>
-            <input type="text" name="Id"></br>
+        <div class="flex-child-element">
+            <h2>Enter your details to order</h2>
+            <form action="/addTicket" method="post">
+                <input type="text" placeholder="Your City" name="city"></br>
+                <input type="text" placeholder="Your ticket point" name="ticketPoint"></br>
+                <input type="text" placeholder="Your name on site" name="userOfTicket"></br>
+                <input type="submit" value="Save">
+            </form>
+        </div>
 
-            <input type="submit" value="Delete">
-        </form>
+
+        <div class="flex-child-element">
+            <h2>Delete your ticket</h2>
+            <form action="/deleteTicket" method="post">
+                <input type="text" placeholder="Input Id to delete" name="Id"></br>
+                <input type="submit" value="Delete">
+            </form>
+        </div>
     </div>
 
-    <div>
-        <button><a href="index">Main page</a></button>
-    </div>
-    <div>
+
+    <div class="mainTable">
         <h2>Ordered tickets</h2>
+        <table border="1">
+            <tr>
+                <th><h2>Id</h2></th>
+                <th><h2>City</h2></th>
+                <th><h2>Ticket point</h2></th>
+                <th><h2>user</h2></th>
+            </tr>
+            <tr th:each="l : ${listTickets}">
+                <td th:utext="${l.Id}">...</td>
+                <td th:utext="${l.city}">...</td>
+                <td th:utext="${l.ticketPoint}">...</td>
+                <td th:utext="${l.userOfTicket}">...</td>
+            </tr>
+        </table>
     </div>
-
-    <table border="1">
-        <tr>
-            <th><h2>Id</h2></th>
-            <th><h2>City</h2></th>
-            <th><h2>Ticket point</h2></th>
-            <th><h2>user</h2></th>
-        </tr>
-        <tr th:each="l : ${listTickets}">
-            <td th:utext="${l.Id}">...</td>
-            <td th:utext="${l.city}">...</td>
-            <td th:utext="${l.ticketPoint}">...</td>
-            <td th:utext="${l.userOfTicket}">...</td>
-        </tr>
-    </table>
 </div>
 
-
-</div>
 </body>
 </html>

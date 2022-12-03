@@ -3,56 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock-fest</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/groupList.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/ManageList.css}"/>
 </head>
 <body>
-<div>
-
-
-    <div>
-        <h2>Add album</h2>
-        <form action="/addAlbum" method="post">
-            <label>Input band name </label>
-            <input type="text" name="name"></br>
-
-            <label>Input album name </label>
-            <input type="text" name="albumName"></br>
-
-            <input type="submit" value="Add">
+<div class="main">
+    <div class="topnav">
+        <a href="/index">Home</a>
+        <a href="/GroupList">Group List</a>
+        <a href="/AlbumsList">Albums</a>
+        <a href="#contact">News</a>
+        <a href="#about">About</a>
+        <form class="out" th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
         </form>
     </div>
 
+    <div class="flex-parent-element">
+        <div class="flex-child-element">
+            <h2>Add album</h2>
+            <form action="/addAlbum" method="post">
 
-    <div>
-        <h2>Delete album</h2>
-        <form action="/deleteAlbum" method="post">
-            <label>Input id to delete </label>
-            <input type="text" name="Id"></br>
+                <input type="text" placeholder="Band name" name="name"></br>
 
-            <input type="submit" value="Delete">
-        </form>
+
+                <input type="text" placeholder="Album name" name="albumName"></br>
+
+                <input type="submit" value="Add">
+            </form>
+        </div>
+
+        <div class="flex-child-element">
+            <h2>Delete album</h2>
+            <form action="/deleteAlbum" method="post">
+                <input type="text" placeholder="Id to delete" name="Id"></br>
+                <input type="submit" value="Delete">
+            </form>
+        </div>
     </div>
 
-    <div>
-        <button><a href="index">Main page</a></button>
+    <div class="mainTable">
+        <table border="1">
+            <tr>
+                <th><h2>Id</h2></th>
+                <th><h2>Band name</h2></th>
+                <th><h2>Album name</h2></th>
+
+            </tr>
+            <tr th:each="l : ${listAlbums}">
+                <td th:utext="${l.id}">...</td>
+                <td th:utext="${l.name}">...</td>
+                <td th:utext="${l.albumName}">...</td>
+            </tr>
+        </table>
     </div>
-
-    <table border="1">
-        <tr>
-            <th><h2>Id</h2></th>
-            <th><h2>Band name</h2></th>
-            <th><h2>Album name</h2></th>
-
-        </tr>
-        <tr th:each="l : ${listAlbums}">
-            <td th:utext="${l.id}">...</td>
-            <td th:utext="${l.name}">...</td>
-            <td th:utext="${l.albumName}">...</td>
-        </tr>
-    </table>
 </div>
 </div>
-
-
 </body>
 </html>

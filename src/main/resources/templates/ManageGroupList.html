@@ -3,60 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock-fest</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/groupList.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/ManageList.css}"/>
 </head>
 <body>
-<div>
-    <div>
-        <h2>Add Group</h2>
-        <form action="/addGroup" method="post">
-            <label>Input groupName </label>
-            <input type="text" name="groupName"></br>
-
-            <label>Input groupDescription </label>
-            <input type="text" name="groupDescription"></br>
-
-            <label>Input GroupStyle </label>
-            <input type="text" name="GroupStyle"></br>
-
-            <input type="submit" value="Save">
+<div class="main">
+    <div class="topnav">
+        <a href="/index">Home</a>
+        <a href="/GroupList">Group List</a>
+        <a href="/AlbumsList">Albums</a>
+        <a href="#contact">News</a>
+        <a href="#about">About</a>
+        <form class="out" th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
         </form>
     </div>
 
-    <div>
-        <h2>Delete Group</h2>
-        <form action="/deleteGroup" method="post">
-            <label>Input Id to delete </label>
-            <input type="text" name="Id"></br>
+    <div class="flex-parent-element">
+        <div class="flex-child-element">
 
-            <input type="submit" value="Delete">
-        </form>
+            <h2>Add Group</h2>
+
+            <form action="/addGroup" method="post">
+                <input type="text" placeholder="Name" name="groupName"></br>
+
+                <input type="text" placeholder="Description" name="groupDescription"></br>
+
+                <input type="text" placeholder="Style" name="GroupStyle"></br>
+
+                <input type="submit" value="Save">
+            </form>
+
+        </div>
+
+
+        <div class="flex-child-element">
+            <h2>Delete Group</h2>
+            <form action="/deleteGroup" method="post">
+                <input type="text" placeholder="Id to delete" name="Id"></br>
+
+                <input type="submit" value="Delete">
+            </form>
+
+        </div>
+
     </div>
 
-    <div>
-        <button><a href="index">Main page</a></button>
+
+    <div class="mainTable">
+        <table border="1">
+            <tr>
+                <th><h2>Id</h2></th>
+                <th><h2>Group</h2></th>
+                <th><h2>Description</h2></th>
+                <th><h2>Style</h2></th>
+            </tr>
+            <tr th:each="l : ${listGroups}">
+                <td th:utext="${l.Id}">...</td>
+                <td th:utext="${l.groupName}">...</td>
+                <td th:utext="${l.groupDescription}">...</td>
+                <td th:utext="${l.groupStyle}">...</td>
+            </tr>
+        </table>
+
     </div>
 
-    <table border="1">
-        <tr>
-            <th><h2>Id</h2></th>
-            <th><h2>Group</h2></th>
-            <th><h2>Description</h2></th>
-            <th><h2>Style</h2></th>
-        </tr>
-        <tr th:each="l : ${listGroups}">
-            <td th:utext="${l.Id}">...</td>
-            <td th:utext="${l.groupName}">...</td>
-            <td th:utext="${l.groupDescription}">...</td>
-            <td th:utext="${l.groupStyle}">...</td>
-        </tr>
-
-
-    </table>
-</div>
 
 </div>
-
-
 </body>
 </html>
