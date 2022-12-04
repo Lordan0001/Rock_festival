@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/About.css}"/>
+
+</head>
+<body>
+
+<div class="topnav">
+  <a href="/index">Home</a>
+  <a href="/GroupList">Group List</a>
+  <a href="/AlbumsList">Albums</a>
+  <a href="/News">News</a>
+  <a href="/About">About</a>
+  <form class="out" th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+  </form>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/img/Vlad2.jpg" alt="Vlad" style="width:100%">
+      <div class="container">
+        <h2>Vlad Bialitski</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Suffered making this site</p>
+        <p>4belstu@mail.ru</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/img/coffee.jpg" alt="Coffee" style="width:100%">
+      <div class="container">
+        <h2>Good Coffee</h2>
+        <p class="title">Art Director</p>
+        <p>Helped work at night</p>
+        <p>4belstu@mail.ru</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/img/vape2.jpg" alt="Vape" style="width:100%">
+      <div class="container">
+        <h2>My vape</h2>
+        <p class="title">Designer</p>
+        <p>Helped me work faster. (do not smoke kids)</p>
+        <p>4belstu@mail.ru</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

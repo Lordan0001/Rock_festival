@@ -102,4 +102,18 @@ public class MainController {
     }
 
 
+
+    @GetMapping("/News")
+    public String NewsPage(Model model) {
+
+        return "News";
+    }
+
+    @GetMapping("/About")
+    public String AboutPage(Model model) {
+
+        return "About";
+    }
+
+
 }

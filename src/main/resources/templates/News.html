@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/News.css}"/>
+</head>
+<body>
+<div class="topnav">
+    <a href="/index">Home</a>
+    <a href="/GroupList">Group List</a>
+    <a href="/AlbumsList">Albums</a>
+    <a href="/News">News</a>
+    <a href="/About">About</a>
+    <form class="out" th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+
+<section class="recentNews">
+    <div class="container">
+        <div class="row">
+            <div class="ct-blog col-sm-6 col-md-4">
+                <div class="inner">
+                    <div class="fauxcrop">
+                        <a href="#"><img alt="News Entry" src="/img/mm2.jpg"></a>
+                    </div>
+                    <div class="ct-blog-content">
+
+                        <h3 class="ct-blog-header">
+                           MM will show his final song from the new album
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="ct-blog col-sm-6 col-md-4">
+                <div class="inner">
+                    <div class="fauxcrop">
+                        <a href="#"><img alt="News Entry" src="/img/ozzy.jpg"></a>
+                    </div>
+                    <div class="ct-blog-content">
+
+                        <h3 class="ct-blog-header">
+                            Will he bite off the head of a bat this time??
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="ct-blog col-sm-6 col-md-4">
+                <div class="inner">
+                    <div class="fauxcrop">
+                        <a href="#"><img alt="News Entry" src="/img/rob.jpg"></a>
+                    </div>
+                    <div class="ct-blog-content">
+
+                        <h3 class="ct-blog-header">
+                            Announces his new film
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="ct-blog col-sm-6 col-md-4">
+                <div class="inner">
+                    <div class="fauxcrop">
+                        <a href="#"><img alt="News Entry" src="/img/met.jpg"></a>
+                    </div>
+                    <div class="ct-blog-content">
+
+                        <h3 class="ct-blog-header">
+                             Return of heavy metal legends!
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="ct-blog col-sm-6 col-md-4">
+                <div class="inner">
+                    <div class="fauxcrop">
+                        <a href="#"><img alt="News Entry" src="/img/ale.jpg"></a>
+                    </div>
+                    <div class="ct-blog-content">
+
+                        <h3 class="ct-blog-header">
+                            Yo-ho-ho and pirate metal
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ct-blog col-sm-6 col-md-4">
+                <div class="inner">
+                    <div class="fauxcrop">
+                        <a href="#"><img alt="News Entry" src="/img/mot.jpg"></a>
+                    </div>
+                    <div class="ct-blog-content">
+
+                        <h3 class="ct-blog-header">
+                            Celebrating the album's thirtieth anniversary!
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
