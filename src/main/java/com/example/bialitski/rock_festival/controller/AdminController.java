@@ -6,6 +6,8 @@ import com.example.bialitski.rock_festival.interfaces.GroupsRepository;
 import com.example.bialitski.rock_festival.model.Albums;
 import com.example.bialitski.rock_festival.model.Cities;
 import com.example.bialitski.rock_festival.model.Groups;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -28,7 +30,7 @@ public class AdminController {
     @Autowired
     private GroupsRepository groupsRepo;
 
-
+    private static Logger logger = LogManager.getRootLogger();
 
     @RequestMapping("/ManageGroupList")
     public ModelAndView ManageGroup(Model model) {
@@ -37,6 +39,7 @@ public class AdminController {
         List<Groups> listGroups = groupsRepo.findAll();
 
         model.addAttribute("listGroups", listGroups);
+        logger.info("Open manage group page");
         return modelAndView;
     }
 
@@ -48,6 +51,7 @@ public class AdminController {
         List<Groups> listGroups = groupsRepo.findAll();
 
         modelAndView.addObject("listGroups", listGroups);
+        logger.info("Group added");
         return modelAndView;
     }
 
@@ -59,6 +63,7 @@ public class AdminController {
         List<Groups> listGroups = groupsRepo.findAll();
 
         modelAndView.addObject("listGroups", listGroups);
+        logger.info("Group deleted");
         return modelAndView;
     }
 
@@ -70,8 +75,10 @@ public class AdminController {
         List<Albums> listAlbums = albumsRepo.findAll();
 
         model.addAttribute("listAlbums", listAlbums);
+        logger.info("Open manage album page");
         return modelAndView;
     }
+
     @RequestMapping("/addAlbum")
     public ModelAndView saveAlbum(Albums albums) {
         albumsRepo.save(albums);
@@ -80,6 +87,7 @@ public class AdminController {
         List<Albums> listAlbums = albumsRepo.findAll();
 
         modelAndView.addObject("listAlbums", listAlbums);
+        logger.info("Album added");
         return modelAndView;
     }
 
@@ -91,13 +99,9 @@ public class AdminController {
         List<Albums> listAlbums = albumsRepo.findAll();
 
         modelAndView.addObject("listAlbums", listAlbums);
+        logger.info("Album deleted");
         return modelAndView;
     }
-
-
-
-
-
 
 }
 

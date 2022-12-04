@@ -1,0 +1,94 @@
+2022-12-04 18:30:59,218 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RockFestivalApplication using Java 17.0.2 on WIN-HGMUQ1VQC5E with PID 10376 (D:\University\БГТУ\3 Курс\5. Семестр\JAVA\Course\Rock_festival\target\classes started by User in D:\University\БГТУ\3 Курс\5. Семестр\JAVA\Course\Rock_festival)
+2022-12-04 18:30:59,221 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-12-04 18:30:59,287 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-04 18:30:59,288 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-04 18:31:00,282 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-04 18:31:00,368 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2022-12-04 18:31:01,069 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-12-04 18:31:01,078 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-12-04 18:31:01,078 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-12-04 18:31:01,078 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-04 18:31:01,148 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-12-04 18:31:01,149 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1860 ms
+2022-12-04 18:31:01,204 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-12-04 18:31:01,469 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-12-04 18:31:01,485 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:sqlserver://WIN-HGMUQ1VQC5E:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;encrypt=true;disableStatementPooling=true;databaseName=Rock_festival;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;'
+2022-12-04 18:31:01,695 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-04 18:31:01,759 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-04 18:31:01,917 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-04 18:31:02,036 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2016Dialect
+2022-12-04 18:31:03,028 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-04 18:31:03,035 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 18:31:03,084 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-04 18:31:03,640 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1fd783c5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f1bc34e, org.springframework.security.web.context.SecurityContextPersistenceFilter@34c0d668, org.springframework.security.web.header.HeaderWriterFilter@65d80c1, org.springframework.security.web.authentication.logout.LogoutFilter@51f70250, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7397efe2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a029eac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f749de1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ecf0671, org.springframework.security.web.session.SessionManagementFilter@12abf4fa, org.springframework.security.web.access.ExceptionTranslationFilter@32d06d69, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64434666]
+2022-12-04 18:31:03,801 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
+2022-12-04 18:31:04,027 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-12-04 18:31:04,041 WARN org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration [restartedMain] 
+
+Using generated security password: af595466-310e-487b-aa40-d866698e9cbb
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-12-04 18:31:04,054 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-12-04 18:31:04,071 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-04 18:31:04,082 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RockFestivalApplication in 5.462 seconds (JVM running for 6.323)
+2022-12-04 18:31:11,361 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-04 18:31:11,361 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-12-04 18:31:11,364 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2022-12-04 18:31:11,404 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-1] Open main page
+2022-12-04 18:31:12,635 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-3] Open group list page
+2022-12-04 18:31:13,298 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-5] Open album list page
+2022-12-04 18:31:13,856 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-7] Open news page
+2022-12-04 18:31:14,696 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-5] Open about page
+2022-12-04 18:31:15,900 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-1] Open main page
+2022-12-04 18:35:05,943 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 18:35:05,946 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-12-04 18:35:05,952 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-12-04 18:35:09,599 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RockFestivalApplication using Java 17.0.2 on WIN-HGMUQ1VQC5E with PID 14388 (D:\University\БГТУ\3 Курс\5. Семестр\JAVA\Course\Rock_festival\target\classes started by User in D:\University\БГТУ\3 Курс\5. Семестр\JAVA\Course\Rock_festival)
+2022-12-04 18:35:09,602 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-12-04 18:35:09,665 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-04 18:35:09,666 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-04 18:35:10,725 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-04 18:35:10,816 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 78 ms. Found 4 JPA repository interfaces.
+2022-12-04 18:35:11,558 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-12-04 18:35:11,568 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-12-04 18:35:11,569 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-12-04 18:35:11,569 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-04 18:35:11,647 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-12-04 18:35:11,648 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1981 ms
+2022-12-04 18:35:11,703 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-12-04 18:35:11,974 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-12-04 18:35:11,988 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:sqlserver://WIN-HGMUQ1VQC5E:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;encrypt=true;disableStatementPooling=true;databaseName=Rock_festival;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;'
+2022-12-04 18:35:12,237 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-04 18:35:12,302 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-04 18:35:12,466 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-04 18:35:12,598 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2016Dialect
+2022-12-04 18:35:13,660 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-04 18:35:13,673 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 18:35:13,723 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-04 18:35:14,331 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@599b5474, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7cd78a6a, org.springframework.security.web.context.SecurityContextPersistenceFilter@54740e9f, org.springframework.security.web.header.HeaderWriterFilter@7d5d0b02, org.springframework.security.web.authentication.logout.LogoutFilter@6764183e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3bcf14e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@318e7ddc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65d80c1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cbe9e41, org.springframework.security.web.session.SessionManagementFilter@2f253bb7, org.springframework.security.web.access.ExceptionTranslationFilter@77840c9a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@77bf29a5]
+2022-12-04 18:35:14,505 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
+2022-12-04 18:35:14,932 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-12-04 18:35:14,982 WARN org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration [restartedMain] 
+
+Using generated security password: 416441c0-9ef9-44ea-8b65-233edcee5ef3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-12-04 18:35:15,035 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-12-04 18:35:15,071 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-04 18:35:15,094 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RockFestivalApplication in 6.029 seconds (JVM running for 6.985)
+2022-12-04 18:35:19,492 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-04 18:35:19,492 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-12-04 18:35:19,494 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2022-12-04 18:35:19,664 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-1] Open group list page
+2022-12-04 18:35:21,108 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-3] Open album list page
+2022-12-04 18:35:22,048 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-5] Open news page
+2022-12-04 18:35:22,465 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-3] Open album list page
+2022-12-04 18:35:22,945 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-5] Open group list page
+2022-12-04 18:35:24,049 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-8] Open main page
+2022-12-04 18:35:25,547 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-1] Open manage ticket page
+2022-12-04 18:35:29,680 INFO com.example.bialitski.rock_festival.controller.MainController [http-nio-8080-exec-10] Open main page
+2022-12-04 18:35:47,561 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-04 18:35:47,564 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-12-04 18:35:47,573 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
