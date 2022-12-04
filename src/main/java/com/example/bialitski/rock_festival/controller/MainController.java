@@ -10,11 +10,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Collection;
 import java.util.List;
 
 @Controller
@@ -39,6 +43,9 @@ public class MainController {
     private String albumListMessage;
 
     private static Logger logger = LogManager.getRootLogger();
+
+    public Object principal;
+    public String remoteUsername;
 
     //main page
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
@@ -80,11 +87,17 @@ public class MainController {
     public ModelAndView ManageTicket(Model model) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("ManageTicketList");
-        List<Cities> listTickets = citiesRepo.findAll();
-
-        model.addAttribute("listTickets", listTickets);
+        model.addAttribute("listTickets", GetCurrentList());
         logger.info("Open manage ticket page");
         return modelAndView;
+    }
+
+
+    public List<Cities> GetCurrentList(){
+        principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        remoteUsername = ((UserDetails) principal).getUsername();
+        List<Cities> listTickets = citiesRepo.getTicketsByUsername(remoteUsername);
+        return listTickets;
     }
 
     @RequestMapping("/addTicket")
@@ -92,9 +105,7 @@ public class MainController {
         citiesRepo.save(cities);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("ManageTicketList");
-        List<Cities> listTickets = citiesRepo.findAll();
-
-        modelAndView.addObject("listTickets", listTickets);
+        modelAndView.addObject("listTickets", GetCurrentList());
         logger.info("Ticket added");
         return modelAndView;
     }
@@ -104,9 +115,7 @@ public class MainController {
         citiesRepo.deleteById(Id);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("ManageTicketList");
-        List<Cities> listTickets = citiesRepo.findAll();
-
-        modelAndView.addObject("listTickets", listTickets);
+        modelAndView.addObject("listTickets", GetCurrentList());
         logger.info("Ticket deleted");
         return modelAndView;
     }
