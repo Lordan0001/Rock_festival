@@ -33,7 +33,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .and()
                 .logout()
-                .permitAll();
+                .permitAll()
+
+                .and()
+                .exceptionHandling().accessDeniedPage("/Error.html");
     }
 
     @Override

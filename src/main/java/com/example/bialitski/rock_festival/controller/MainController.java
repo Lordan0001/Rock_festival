@@ -115,5 +115,10 @@ public class MainController {
         return "About";
     }
 
+//    @GetMapping("/error")
+//    public String ErrorPage(Model model) {
+//
+//        return "error";
+//    }
 
 }
