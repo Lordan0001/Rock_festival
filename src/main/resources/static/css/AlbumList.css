@@ -41,7 +41,7 @@ body {
 
 .refStyle{
     text-decoration: none;
-    color: #be202b;
+    color: #000000;
     background-color: #dddddd;
 
 }
@@ -54,5 +54,6 @@ body {
     width: 100px;
     height: 50px;
     margin: auto;
+    text-align: right;
 
 }
